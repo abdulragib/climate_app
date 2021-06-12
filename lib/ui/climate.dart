@@ -227,3 +227,18 @@ TextStyle tempStyle() {
 //
 // AsyncSnapshot class is used in the builder property of a StreamBuilder
 
+//onPressed: () {
+//   Navigator.push(
+//     context,
+//     MaterialPageRoute(builder: (context) => SecondRoute()),
+//   );
+// } to go to second screen
+//use the Navigator.push() method. The push() method adds a Route to the stack of routes managed by the Navigator.
+// Where does the Route come from? You can create your own, or use a MaterialPageRoute, which is useful because it transitions to the new route using a platform-specific animation.
+
+//// Within the SecondRoute widget
+// onPressed: () {
+//   Navigator.pop(context);
+// } to go back to current scrren
+
+//By using the Navigator.pop() method. The pop() method removes the current Route from the stack of routes managed by the Navigator.
