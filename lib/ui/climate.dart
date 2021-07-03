@@ -4,6 +4,7 @@ import '../util/util.dart' as util;
 import 'dart:async';
 import 'package:http/http.dart' as http;
 
+
 class climate extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -13,9 +14,7 @@ class climate extends StatefulWidget {
 }
 
 class climatestate extends State<climate> {
-
- String _cityEntered;
-
+  String _cityEntered='';
   Future _goToNextScreen(BuildContext context) async {
     Map result = await Navigator.of(context)
         .push(new MaterialPageRoute<dynamic>(builder: (BuildContext context) {
@@ -23,8 +22,8 @@ class climatestate extends State<climate> {
     }));
 
     if(result != null && result.containsKey('enter')) {
-      _cityEntered = result['enter'];
-      //print(result['enter'].toString());
+       _cityEntered= result['enter'];
+     // print(result['enter'].toString());
     }
   }
 
@@ -226,4 +225,20 @@ TextStyle tempStyle() {
 // future: is a property of FutureBuilder class where we write the instruction that we want/need to execute asychronously
 //
 // AsyncSnapshot class is used in the builder property of a StreamBuilder
+
+//onPressed: () {
+//   Navigator.push(
+//     context,
+//     MaterialPageRoute(builder: (context) => SecondRoute()),
+//   );
+// } to go to second screen
+//use the Navigator.push() method. The push() method adds a Route to the stack of routes managed by the Navigator.
+// Where does the Route come from? You can create your own, or use a MaterialPageRoute, which is useful because it transitions to the new route using a platform-specific animation.
+
+//// Within the SecondRoute widget
+// onPressed: () {
+//   Navigator.pop(context);
+// } to go back to current scrren
+
+//By using the Navigator.pop() method. The pop() method removes the current Route from the stack of routes managed by the Navigator.
 

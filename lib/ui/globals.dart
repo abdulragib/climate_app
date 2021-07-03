@@ -1,2 +1,3 @@
 // TODO Implement this library.
-var cityEntered;
+
+ late String _cityEntered;
